@@ -53,13 +53,11 @@ object Lists:
     @tailrec def maxT(l: List[Int], accMax: Int): Int = l match
       case Nil       => accMax
       case x :: tail => maxT(tail, if x > accMax then x else accMax)
-    xs match 
+    xs match
       case Nil => throw new NoSuchElementException
-      case _ => maxT(xs, 0)
+      case _   => maxT(xs, Int.MinValue)
 
-
-
-  @main def run() = 
+  @main def run() =
     val test = (1 to 15).toList
     val total = sum(test)
     val maxValue = max(test)
