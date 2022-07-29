@@ -98,6 +98,10 @@ class ListsSuite extends munit.FunSuite:
     assert(max(List(3, 7, 2)) == 7)
   }
 
+  test("negative values") {
+    assert(max(List(-3, -2, -1)) == -1)
+  }
+
   test("no Max in empty list") {
     try
       max(Nil)
